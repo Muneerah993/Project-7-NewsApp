@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_main"
+    android:layoutDirection="ltr">
+
+    <ImageView
+        android:id="@+id/current_image"
+        style="@style/image_main"
+        android:src="@drawable/newslogo1"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/current_image">
+        <!-- Layout for a list of articles -->
+        <ListView
+            android:id="@+id/list"
+            style="@style/list_view" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <!-- Empty view is only visible when the list has no items. -->
+    <TextView
+        android:id="@+id/empty_view"
+        style="@style/empty_main_portrait"
+        tools:text="@string/no_data_available" />
+    <!-- progress bar view is only visible when the list is being created -->
+    <ProgressBar
+        android:id="@+id/loading_spinner"
+        style="@style/progress_main_portrait" />
+</RelativeLayout>

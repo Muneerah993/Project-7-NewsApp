@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr">
+
+    <TextView
+        android:id="@+id/title_of_article"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="@string/temp_title"
+        style="@style/list_item_title" />
+
+    <TextView
+        android:id="@+id/date_text"
+        android:text="@string/date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_of_article"
+        style="@style/list_item_field" />
+
+    <TextView
+        android:id="@+id/date_of_article"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="@id/parent_layout"
+        app:layout_constraintStart_toEndOf="@id/date_text"
+        app:layout_constraintTop_toBottomOf="@+id/title_of_article"
+        tools:text="@string/temp_date"
+        style="@style/list_item_text" />
+
+    <TextView
+        android:id="@+id/author_text"
+        style="@style/list_item_field"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_text"
+        android:text="@string/author" />
+
+    <TextView
+        android:id="@+id/author_of_article"
+        style="@style/list_item_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="@id/parent_layout"
+        app:layout_constraintStart_toEndOf="@id/author_text"
+        app:layout_constraintTop_toBottomOf="@+id/date_of_article"
+        tools:text="@string/temp_author" />
+
+    <TextView
+        android:id="@+id/section_text"
+        style="@style/list_item_field"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/author_text"
+        android:paddingBottom="@dimen/small_margin"
+        android:text="@string/section" />
+
+    <TextView
+        android:id="@+id/section_of_article"
+        style="@style/list_item_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="@id/parent_layout"
+        app:layout_constraintStart_toEndOf="@id/section_text"
+        app:layout_constraintTop_toBottomOf="@+id/author_of_article"
+        android:paddingBottom="@dimen/small_margin"
+        tools:text="@string/temp_section" />
+</android.support.constraint.ConstraintLayout>
